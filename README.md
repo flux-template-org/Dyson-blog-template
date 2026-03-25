@@ -1,59 +1,48 @@
-# Dyson-Inspired Astro Blog Template
+<div align="center">
 
-A modern, minimal, and highly customizable blog and portfolio template built with [Astro](https://astro.build/) and [Tailwind CSS](https://tailwindcss.com/). This template is inspired by Dyson’s clean design language, focusing on clarity, performance, and a seamless user experience.
+# Blog Template
 
-## Features
+A production-ready blog built with Astro, React, and Tailwind CSS.
 
-- **Minimal & Modern Design:** Clean layouts and typography for maximum readability.
-- **Responsive Components:** Includes Bento cards, split layouts, two-column sections, and more.
-- **Dynamic Content:** Data-driven pages and components for easy customization.
-- **Blog System:** Journal index, individual post pages, categories, tags, and author support.
-- **Smart Components:** Reusable, dynamic Navbar, Footer, Breadcrumb, CTA, and more.
-- **Performance Optimized:** High Lighthouse scores for performance, accessibility, and SEO.
-- **Dark/Light Mode Ready:** Easily adaptable for dual-mode experiences.
-- **Privacy First:** Includes privacy policy and imprint pages.
-- **Easy Deployment:** Ready for Netlify, Vercel, or your favorite static host.
+[Live Demo](https://flux-theme.online/gallery/blog) · [Docs](https://flux-theme.online/tutorial) · [Support](mailto:hello@jsgbn.com)
 
-## File Structure
-
-```
-src/
-├── components/
-│   ├── cards/
-│   ├── global/
-│   ├── AsymmetricLayout.astro
-│   ├── SplitLayout.astro
-│   ├── TwoColumnLayout.astro
-│   └── Breadcrumb.astro
-├── data/
-├── layout/
-├── pages/
-└── styles/
-```
-
-## Getting Started
-
-1. **Install dependencies:**
-   ```bash
-   npm install
-   ```
-2. **Start the development server:**
-   ```bash
-   npm run dev
-   ```
-3. **Customize your content:**
-   Edit the files in `/data` and `/pages` to update site content, navigation, and blog posts.
-
-## Customization
-
-- Update navigation and footer in `/data/navigation.json` and `/data/footer.json`.
-- Add or edit blog posts in `/data/journal.json` and `/pages/journal/[slug].astro`.
-- Adjust styles in `/styles/global.css` or extend with Tailwind.
-
-## License
-
-This project is open source and available under the [MIT License](LICENSE).
+</div>
 
 ---
 
-Built with ❤️ using Astro and Tailwind CSS.
+### Overview
+
+A complete blog with multiple layout styles, Sanity CMS integration for content management, privacy-first structure with compliance pages, and SEO-optimized output.
+
+### Features
+
+- Multiple post layout styles — bento grids, split views, asymmetric cards
+- Sanity CMS integration — write in the studio, publish to static pages
+- Category and tag system with dedicated index pages
+- Author profiles with bio and post archive
+- RSS feed and sitemap generation
+- Search with live filtering
+- Newsletter signup integration
+- Reading time and table of contents
+- Social sharing and Open Graph images
+- Privacy, terms, and compliance pages included
+
+### Tech Stack
+
+`Astro` `React` `Tailwind CSS` `Sanity CMS`
+
+### Getting Started
+
+```bash
+# Install dependencies
+npm install
+
+# Set up environment variables
+cp .env.example .env
+
+# Start dev server
+npm run dev
+
+# Build for production
+npm run build
+```
