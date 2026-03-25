@@ -4,7 +4,7 @@
 
 A production-ready blog built with Astro, React, and Tailwind CSS.
 
-[Live Demo](https://flux-theme.online/gallery/blog) · [Docs](https://flux-theme.online/tutorial) · [Support](mailto:hello@jsgbn.com)
+· [Docs](https://flux-theme.online/tutorial) · [Support](mailto:hello@jsgbn.com)
 
 </div>
 
