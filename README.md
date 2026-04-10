@@ -1,7 +1,7 @@
 <div align="center">
 
 # Blog Template
- <img src="https://img.shields.io/badge/Astro-5.0-FF5D01?logo=astro&logoColor=white" alt="Astro">
+ <img src="https://img.shields.io/badge/Astro-6.0-FF5D01?logo=astro&logoColor=white" alt="Astro">
   <img src="https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black" alt="React">
   <img src="https://img.shields.io/badge/Tailwind_CSS-4.0-06B6D4?logo=tailwindcss&logoColor=white" alt="Tailwind CSS">
   <img src="https://img.shields.io/badge/Framer_Motion-12-0055FF?logo=framer&logoColor=white" alt="Framer Motion">
