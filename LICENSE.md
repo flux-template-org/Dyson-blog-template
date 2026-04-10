@@ -27,4 +27,4 @@ Copyright (c) 2025-present Flux Theme (jsgbn)
 - Create competing templates using this code
 - Remove or alter license/copyright notices
 
-For questions: hello@jsgbn.com
+For questions: contact@flux-theme.online
