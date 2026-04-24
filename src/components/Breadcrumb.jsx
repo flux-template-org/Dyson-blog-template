@@ -1,4 +1,3 @@
-/** @param {{ data: { label: string; href?: string }[]; title?: string; pageTitle?: string }} props */
 export default function Breadcrumb({ data = [], title, pageTitle }) {
   return (
     <section className="w-full">

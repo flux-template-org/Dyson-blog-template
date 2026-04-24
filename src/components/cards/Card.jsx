@@ -1,4 +1,5 @@
-/** @param {{ data: { id?: string; slug?: string; href?: string; image: string; title: string; description: string }[]; sectionTitle?: string; maxCards?: number; basePath?: string; seeMoreHref?: string }} props */
+import { MotionWrapper, MotionChild } from "../utils/MotionWrapper.jsx";
+
 export default function Cards({ data = [], sectionTitle, maxCards, basePath = "/journal", seeMoreHref }) {
   const visibleCards = maxCards ? data.slice(0, maxCards) : data;
 
@@ -7,13 +8,13 @@ export default function Cards({ data = [], sectionTitle, maxCards, basePath = "/
       <hr className="mb-6 border-t border-gray-200" />
       <h2 className="text-gray-400 text-sm font-light mb-6">{sectionTitle}</h2>
 
-      <div data-gsap="stagger-up" className="grid grid-cols-1 grotesque-font sm:grid-cols-2 md:grid-cols-4 gap-4">
+      <MotionWrapper type="fade-up" isContainer className="grid grid-cols-1 grotesque-font sm:grid-cols-2 md:grid-cols-4 gap-4">
         {visibleCards.map((item) => (
-          <a
-            key={item.id || item.slug}
-            href={item.slug ? `${basePath}/${item.slug}` : (item.href ?? "#")}
-            className="block group"
-          >
+          <MotionChild key={item.id || item.slug} className="block group">
+            <a
+              href={item.slug ? `${basePath}/${item.slug}` : (item.href ?? "#")}
+              className="block"
+            >
             <img
               loading="lazy"
               src={item.image}
@@ -34,9 +35,10 @@ export default function Cards({ data = [], sectionTitle, maxCards, basePath = "/
                 {item.description}
               </p>
             </div>
-          </a>
+            </a>
+          </MotionChild>
         ))}
-      </div>
+      </MotionWrapper>
 
       {maxCards && data.length > maxCards && (
         <div className="flex justify-center mt-6">

@@ -7,5 +7,6 @@ import AboutData from "../data/about.json";
 ---
 
 <BaseLayout>
-  <CreatorProfile data={AboutData} />
+  <BaseHead title="About" />
+  <CreatorProfile data={AboutData} client:load />
 </BaseLayout>

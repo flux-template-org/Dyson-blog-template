@@ -1,3 +1,5 @@
+import { MotionWrapper, MotionChild } from "../utils/MotionWrapper.jsx";
+
 export default function Features({ data = {} }) {
   const { label, title, items = [] } = data;
 
@@ -16,17 +18,17 @@ export default function Features({ data = {} }) {
           </h2>
         )}
       </div>
-      <div data-gsap="stagger-up" className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+      <MotionWrapper type="fade-up" isContainer className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
         {items.map((item, idx) => (
-          <div key={idx} className="flex flex-col gap-3 border-t border-gray-200 pt-6 pb-10 pr-8">
+          <MotionChild key={idx} className="flex flex-col gap-3 border-t border-gray-200 pt-6 pb-10 pr-8">
             <span className="text-xs text-gray-300 font-light grotesque-font tabular-nums">
               {String(idx + 1).padStart(2, "0")}
             </span>
             <h3 className="text-sm font-light text-gray-900 grotesque-font">{item.title}</h3>
             <p className="text-sm font-light text-gray-400 leading-relaxed">{item.description}</p>
-          </div>
+          </MotionChild>
         ))}
-      </div>
+      </MotionWrapper>
     </section>
   );
 }

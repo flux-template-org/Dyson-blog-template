@@ -1,8 +1,10 @@
+import { MotionWrapper } from "../utils/MotionWrapper.jsx";
+
 export default function Cta({ data = {} }) {
   const { label, title, placeholder, button, count, avatars = [], note } = data;
 
   return (
-    <section data-gsap="fade-up" className="w-full grotesque-font py-30">
+    <MotionWrapper type="fade-up" className="w-full grotesque-font py-30" as="section">
       <div className="max-w-8xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10">
         <hr className="mb-6 border-t border-gray-200" />
         <div className="grid items-center gap-4">
@@ -40,6 +42,6 @@ export default function Cta({ data = {} }) {
           </div>
         </div>
       </div>
-    </section>
+    </MotionWrapper>
   );
 }

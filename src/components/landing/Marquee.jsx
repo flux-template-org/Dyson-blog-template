@@ -1,9 +1,10 @@
-/** @param {{ items: string[] }} props */
+import { MotionWrapper } from "../utils/MotionWrapper.jsx";
+
 export default function Marquee({ items = [] }) {
   const doubled = [...items, ...items];
 
   return (
-    <section data-gsap="fade-in" className="w-full overflow-hidden border-y border-gray-200 py-4 my-8">
+    <MotionWrapper type="fade-in" className="w-full overflow-hidden border-y border-gray-200 py-4 my-8" as="section">
       <style>{`
         .marquee-track {
           display: flex;
@@ -26,6 +27,6 @@ export default function Marquee({ items = [] }) {
           </span>
         ))}
       </div>
-    </section>
+    </MotionWrapper>
   );
 }

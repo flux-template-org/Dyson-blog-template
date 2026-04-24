@@ -1,9 +1,10 @@
-/** @param {{ data: { cards: { id: string; name: string; image: string; size?: string }[] } }} props */
+import { MotionWrapper, MotionChild } from "../utils/MotionWrapper.jsx";
+
 export default function BentoCard({ data = { cards: [] } }) {
   const { cards = [] } = data;
 
   return (
-    <section data-gsap="stagger-up" className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 w-full max-w-8xl mx-auto px-2 sm:px-4">
+    <MotionWrapper type="fade-up" isContainer className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 w-full max-w-8xl mx-auto px-2 sm:px-4" as="section">
       {cards.map((card) => {
         let sizeClass = "";
         if (card.size === "large") {
@@ -15,7 +16,7 @@ export default function BentoCard({ data = { cards: [] } }) {
         }
 
         return (
-          <div
+          <MotionChild
             key={card.id}
             className={`rounded-xl flex flex-col relative overflow-hidden transition-transform duration-200 ease-in-out hover:-translate-y-1 ${sizeClass}`}
           >
@@ -30,9 +31,9 @@ export default function BentoCard({ data = { cards: [] } }) {
             <div className="absolute top-0 left-0 w-full flex justify-between items-center px-4 py-3">
               <span className="text-base text-gray-800 font-light">{card.name}</span>
             </div>
-          </div>
+          </MotionChild>
         );
       })}
-    </section>
+    </MotionWrapper>
   );
 }

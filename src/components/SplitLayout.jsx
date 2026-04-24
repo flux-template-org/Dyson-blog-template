@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import SplitLayoutSkeleton from "./SplitLayoutSkeleton.jsx";
+import { MotionWrapper } from "./utils/MotionWrapper.jsx";
 
 function AccordionItem({ service, isOpen, onToggle }) {
   return (
@@ -59,8 +60,7 @@ export default function SplitLayout({ data = {} }) {
   return (
     <section className="min-h-screen flex items-center justify-center">
       <div className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 overflow-hidden">
-        {/* Left: accordion (desktop) */}
-        <div data-gsap="slide-left" className="hidden md:flex flex-col p-8 justify-between">
+        <MotionWrapper type="slide-left" className="hidden md:flex flex-col p-8 justify-between" isContainer={false}>
           <div>
             {headingEl}
             <div>
@@ -74,10 +74,9 @@ export default function SplitLayout({ data = {} }) {
               ))}
             </div>
           </div>
-        </div>
+        </MotionWrapper>
 
-        {/* Right: image + mobile accordion */}
-        <div data-gsap="slide-right" className="flex flex-col md:h-[750px] px-4 md:px-0 w-full">
+        <MotionWrapper type="slide-right" className="flex flex-col md:h-[750px] px-4 md:px-0 w-full">
           {headingMobile}
           <img
             loading="lazy"
@@ -102,7 +101,7 @@ export default function SplitLayout({ data = {} }) {
           <div className="hidden md:flex flex-col md:flex-row gap-2 py-4 border-gray-200 text-xs">
             <div className="text-gray-500">{description}</div>
           </div>
-        </div>
+        </MotionWrapper>
       </div>
     </section>
   );

@@ -20,15 +20,15 @@ import testimonialsData from "../data/testimonials.json";
 import ctaData from "../data/cta.json";
 ---
 
-<BaseLayout>
+<BaseLayout transparentNav={true}>
   <BaseHead />
-  <Hero />
-  <Stats data={statsData} />
-  <Marquee items={marqueeData} />
-  <Title title="Dyson Inspired" />
-  <BentoCard data={cards} />
-  <Features data={featuresData} />
-  <Cards data={journalData} sectionTitle="Inspired updates" maxCards={4} basePath="/journal" seeMoreHref="/journal" />
-  <Testimonials data={testimonialsData} />
-  <Cta data={ctaData} />
+  <Hero client:load />
+  <Stats data={statsData} client:load />
+  <Marquee items={marqueeData} client:load />
+  <Title title="Dyson Inspired" client:load />
+  <BentoCard data={cards} client:load />
+  <Features data={featuresData} client:load />
+  <Cards data={journalData} sectionTitle="Inspired updates" maxCards={4} basePath="/journal" seeMoreHref="/journal" client:load />
+  <Testimonials data={testimonialsData} client:load />
+  <Cta data={ctaData} client:load />
 </BaseLayout>

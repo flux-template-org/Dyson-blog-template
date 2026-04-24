@@ -1,9 +1,10 @@
-/** @param {{ data: { sections: { title: string; content: string[] }[]; updated?: string } }} props */
+import { MotionWrapper } from "./utils/MotionWrapper.jsx";
+
 export default function TwoColumnLayout({ data = { sections: [], updated: "" } }) {
   const { sections = [], updated = "" } = data;
 
   return (
-    <section className="max-w-7xl grotesque-font mx-auto px-4">
+    <MotionWrapper type="fade-up" className="max-w-7xl grotesque-font mx-auto px-4" as="section">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start p-0">
         <div className="md:col-span-1">
           {updated && (
@@ -25,6 +26,6 @@ export default function TwoColumnLayout({ data = { sections: [], updated: "" } }
           ))}
         </div>
       </div>
-    </section>
+    </MotionWrapper>
   );
 }

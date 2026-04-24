@@ -7,13 +7,16 @@ import tailwindcss from "@tailwindcss/vite";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://flux.com",
+  site: "https://dyson-template.com",
   devToolbar: {
-    enabled: false, // <-- Correct way to disable the DevToolbar
+    enabled: false,
   },
   integrations: [sitemap(), react()],
 
   vite: {
     plugins: [tailwindcss()],
+    ssr: {
+      external: ["svgo"],
+    },
   },
 });

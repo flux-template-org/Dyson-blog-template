@@ -1,3 +1,5 @@
+import { MotionWrapper, MotionChild } from "../utils/MotionWrapper.jsx";
+
 export default function Testimonials({ data = {} }) {
   const { label, items = [] } = data;
 
@@ -9,9 +11,9 @@ export default function Testimonials({ data = {} }) {
           {label}
         </span>
       )}
-      <div data-gsap="stagger-up" className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
+      <MotionWrapper type="fade-up" isContainer className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
         {items.map((item, idx) => (
-          <div key={idx} className="flex flex-col justify-between gap-6 border border-gray-100 p-8 rounded-xl">
+          <MotionChild key={idx} className="flex flex-col justify-between gap-6 border border-gray-100 p-8 rounded-xl">
             <p className="text-base font-light text-gray-700 leading-relaxed grotesque-font">
               &ldquo;{item.quote}&rdquo;
             </p>
@@ -19,9 +21,9 @@ export default function Testimonials({ data = {} }) {
               <span className="text-sm font-light text-gray-900">{item.name}</span>
               <span className="text-xs font-light text-gray-400">{item.role}</span>
             </div>
-          </div>
+          </MotionChild>
         ))}
-      </div>
+      </MotionWrapper>
     </section>
   );
 }

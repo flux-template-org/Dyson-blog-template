@@ -1,5 +1,3 @@
-/** Reusable skeleton primitives — compose these to build any loading state */
-
 export function SkeletonBlock({ className = "" }) {
   return <div className={`skeleton ${className}`} />;
 }

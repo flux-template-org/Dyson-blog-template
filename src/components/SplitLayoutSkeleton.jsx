@@ -4,8 +4,6 @@ export default function SplitLayoutSkeleton() {
   return (
     <section className="min-h-screen flex items-center justify-center">
       <div className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 overflow-hidden">
-
-        {/* Left: accordion skeleton (desktop only) */}
         <div className="hidden md:flex flex-col p-8 gap-6">
           <SkeletonHeading className="h-8 w-3/4 mb-4" />
           {Array.from({ length: 5 }).map((_, i) => (
@@ -17,7 +15,6 @@ export default function SplitLayoutSkeleton() {
           <SkeletonText lines={2} className="mt-4" />
         </div>
 
-        {/* Right: image skeleton */}
         <div className="flex flex-col md:h-[750px] px-4 md:px-0 gap-4">
           <SkeletonHeading className="h-7 w-2/3 block md:hidden mb-2" />
           <SkeletonImage className="flex-1 rounded-2xl min-h-[300px]" />

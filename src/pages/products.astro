@@ -8,7 +8,7 @@ import journalData from "../data/journal.json";
 ---
 
 <BaseLayout>
-  <BaseHead />
-  <Title title="All Products" />
-  <Cards data={journalData} basePath="/products" />
+  <BaseHead title="Products" />
+  <Title title="All Products" client:load />
+  <Cards data={journalData} basePath="/products" client:load />
 </BaseLayout>
